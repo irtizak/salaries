@@ -11,7 +11,7 @@ EXPOSE 8080
 COPY . /app
 
 # cmd to launch app when container is run
-CMD streamlit run --server.port 8080 --server.enableCORS=false app.py
+CMD streamlit run --server.port 8080 --server.enableCORS=false /app/app.py
 
 # streamlit-specific commands for config
 # ENV LC_ALL=C.UTF-8
