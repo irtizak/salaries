@@ -29,7 +29,7 @@ def run():
     st.title('Salary Prediction App')
 
     if add_selectbox == 'Online':
-        yrs_since_phd = st.number_input('Years Since Ph.D.', min_value=0., max_value=60., value=22.)
+        yrs_since_phd = st.number_input('Years Since Ph.D. and Masters and Whatever', min_value=0., max_value=60., value=22.)
         yrs_service = st.number_input('Years of Service', min_value=0., max_value=60., value=17.)
 
         output=''
