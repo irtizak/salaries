@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: salaries
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: salariesprediction
+  template:
+    metadata:
+      labels:
+        app: salariesprediction
+    spec:
+      containers:
+      - name: cv-app
+        image: gcr.io/salaries-streamlit/streamlitapp:v1
+        ports:
+        - containerPort: 8080
